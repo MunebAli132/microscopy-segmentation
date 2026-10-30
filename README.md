@@ -129,21 +129,6 @@ git add .
 git commit -m "Describe your changes"
 git push
 ```
-
-## Deploy online with Streamlit Community Cloud
-
-1. Push the project to a GitHub repository.
-2. Visit [Streamlit Community Cloud](https://share.streamlit.io/).
-3. Sign in using GitHub and authorize access to the repository.
-4. Choose **Create app**.
-5. Select your repository, branch (`main`), and main file path (`app.py`).
-6. Click **Deploy**.
-7. Wait for the build to finish. Streamlit will provide a public app URL.
-
-The repository must include `requirements.txt` so the cloud service can install the Python packages.
-
-Deployment availability, limits, and pricing are controlled by Streamlit and may change. Do not upload confidential, identifiable, or sensitive microscopy data to a public app unless you have permission and have checked the hosting service's privacy terms.
-
 ## Troubleshooting
 
 - **`streamlit` is not recognized:** activate your virtual environment and run `python -m pip install -r requirements.txt`; then start with `python -m streamlit run app.py`.
