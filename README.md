@@ -99,8 +99,51 @@ Open that address in your browser. Keep the terminal open while using the app. S
 - **Objects detected:** number of connected foreground components. Touching cells may be counted as one.
 - **Area:** reported in pixels and percentage of image area. Physical units require image calibration.
 
+## Publish on GitHub
 
+1. Sign in to [GitHub](https://github.com/).
+2. Click **New repository**.
+3. Name it `microscopy-segmentation`.
+4. Choose Public or Private.
+5. Do not initialize with a README if you already have this project's README.
+6. Create the repository.
+7. Open a terminal in the project folder and run:
+
+```bash
+git init
+git add .
+git commit -m "Initial microscopy segmentation app"
+git branch -M main
+git remote add origin https://github.com/YOUR-USERNAME/microscopy-segmentation.git
+git push -u origin main
 ```
+
+Replace the URL with the URL shown for your new repository. Git may ask you to authenticate; follow GitHub's sign-in instructions. Do not put passwords or access tokens in the code or repository.
+
+### Updating the GitHub repository
+
+After changing files, run:
+
+```bash
+git add .
+git commit -m "Describe your changes"
+git push
+```
+
+## Deploy online with Streamlit Community Cloud
+
+1. Push the project to a GitHub repository.
+2. Visit [Streamlit Community Cloud](https://share.streamlit.io/).
+3. Sign in using GitHub and authorize access to the repository.
+4. Choose **Create app**.
+5. Select your repository, branch (`main`), and main file path (`app.py`).
+6. Click **Deploy**.
+7. Wait for the build to finish. Streamlit will provide a public app URL.
+
+The repository must include `requirements.txt` so the cloud service can install the Python packages.
+
+Deployment availability, limits, and pricing are controlled by Streamlit and may change. Do not upload confidential, identifiable, or sensitive microscopy data to a public app unless you have permission and have checked the hosting service's privacy terms.
+
 ## Troubleshooting
 
 - **`streamlit` is not recognized:** activate your virtual environment and run `python -m pip install -r requirements.txt`; then start with `python -m streamlit run app.py`.
@@ -110,7 +153,8 @@ Open that address in your browser. Keep the terminal open while using the app. S
 - **Poor segmentation:** try the opposite object polarity, adjust the manual threshold, or improve image illumination/contrast before segmentation.
 
 ## Project structure
-```
+
+```text
 microscopy-segmentation/
 ├── app.py
 ├── requirements.txt
@@ -121,3 +165,11 @@ microscopy-segmentation/
 └── outputs/
     └── README.md
 ```
+
+## Limitations and next steps
+
+This version uses global thresholding and connected-component analysis. It does not perform machine-learning segmentation, separate touching cells reliably, read microscope calibration metadata, or preserve multi-page TIFF stacks. Possible extensions include watershed separation, adaptive thresholding, Cellpose, StarDist, or a trained U-Net model.
+
+## License
+
+Choose a license before distributing the project. For example, an MIT License is suitable for many open-source projects; add a `LICENSE` file if you choose it.
