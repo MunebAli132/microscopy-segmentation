@@ -110,8 +110,7 @@ Open that address in your browser. Keep the terminal open while using the app. S
 - **Poor segmentation:** try the opposite object polarity, adjust the manual threshold, or improve image illumination/contrast before segmentation.
 
 ## Project structure
-
-```text
+```
 microscopy-segmentation/
 ├── app.py
 ├── requirements.txt
