@@ -38,8 +38,6 @@ git clone https://github.com/MunebAli132/microscopy-segmentation.git
 cd microscopy-segmentation
 ```
 
-Replace `YOUR-USERNAME` with your GitHub username.
-
 ### 3. Create and activate a virtual environment
 
 **Windows (PowerShell):**
