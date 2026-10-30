@@ -122,11 +122,3 @@ microscopy-segmentation/
 └── outputs/
     └── README.md
 ```
-
-## Limitations and next steps
-
-This version uses global thresholding and connected-component analysis. It does not perform machine-learning segmentation, separate touching cells reliably, read microscope calibration metadata, or preserve multi-page TIFF stacks. Possible extensions include watershed separation, adaptive thresholding, Cellpose, StarDist, or a trained U-Net model.
-
-## License
-
-Choose a license before distributing the project. For example, an MIT License is suitable for many open-source projects; add a `LICENSE` file if you choose it.
