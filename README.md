@@ -99,36 +99,6 @@ Open that address in your browser. Keep the terminal open while using the app. S
 - **Objects detected:** number of connected foreground components. Touching cells may be counted as one.
 - **Area:** reported in pixels and percentage of image area. Physical units require image calibration.
 
-## Publish on GitHub
-
-1. Sign in to [GitHub](https://github.com/).
-2. Click **New repository**.
-3. Name it `microscopy-segmentation`.
-4. Choose Public or Private.
-5. Do not initialize with a README if you already have this project's README.
-6. Create the repository.
-7. Open a terminal in the project folder and run:
-
-```bash
-git init
-git add .
-git commit -m "Initial microscopy segmentation app"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/microscopy-segmentation.git
-git push -u origin main
-```
-
-Replace the URL with the URL shown for your new repository. Git may ask you to authenticate; follow GitHub's sign-in instructions. Do not put passwords or access tokens in the code or repository.
-
-### Updating the GitHub repository
-
-After changing files, run:
-
-```bash
-git add .
-git commit -m "Describe your changes"
-git push
-```
 
 ## Deploy online with Streamlit Community Cloud
 
