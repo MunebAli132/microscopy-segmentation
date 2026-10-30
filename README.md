@@ -34,7 +34,7 @@ Some systems use `python3` instead of `python`.
 Either download this repository as a ZIP from GitHub and extract it, or clone it:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/microscopy-segmentation.git
+git clone https://github.com/MunebAli132/microscopy-segmentation.git
 cd microscopy-segmentation
 ```
 
